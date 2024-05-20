@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-left: 30%;
+            padding: 3%;
+            height: 80%;
+            width: 440px;
+            border: 0.8px solid grey;
+            margin-top: 2%;
+
+            box-shadow: darkgray;
+
+
+        }
+
+        h1 {
+            margin-left: 10%;
+            font-size: 2.0rem;
+        }
+
+        form {
+            margin: 2%;
+            width: 100%;
+            line-height: 2.5;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        form>#submit {
+            margin-left: 27%;
+            padding: 3px;
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Registered new Student</h1>
+        <form method="post">
+            <label for="id">ID: </label><input type="number" name="id" id="id" min="1" required><br>
+            <label for="name">Name: </label><input type="text" id="name" name="name" required><br>
+            <label for="age">Age: </label><input type="number" id="age" name="age" min="0"><br>
+            <label for="gender">Gender: </label> Male<input type="radio" value="Male" name="gender"> Female<input
+                type="radio" value="Female" name="gender"><br>
+            <label for="section">Section: </label> <input type="checkbox" value="A" name="section"> A <input
+                type="checkbox" value="B" name="section"> B <input type="checkbox" value="C" name="section"> C <input
+                type="checkbox" value="D" name="section"> D<br>
+            <label for="city">City:  </label><select name="city">
+                <option value="#">--Select your city--</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Sialkot">Sialkot</option>
+                <option value="Gujranwala">Gujranwala</option>
+                <option value="Kasur">Kasur</option>
+                <option value="Lasbela">Lasbela</option>
+                <option value="NotKundi">NotKundi</option>
+                <option value="Bolan">Bolan</option>
+            </select>
+            <br>
+            <label for="province">Province:  </label><select name="province">
+                <option value="#">--Select your province--</option>
+                <option value="Punjab">Punjab</option>
+                <option value="##">Sindh (N/A)</option>
+                <option value="Balochistan">Balochistan</option>
+                <option value="##">Khyber Pakhtun Khawa (N/A)</option>
+                <option value="##">Gilgit Baltistan (N/A)</option>
+                <option value="##">Azad Jamu Kashmir (N/A)</option>
+            </select>
+            <br>
+            <label for="country">Country:  </label><select name="country">
+                <option value="#">--Select your country--</option>
+                <option value="Pakistan">Pakistan</option>
+            </select>
+            <input type="submit" value="Register" id="submit">
+        </form>
+    </div>
+</body>
+
+</html>

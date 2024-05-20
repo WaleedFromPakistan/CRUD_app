@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-left: 30%;
+            padding: 3%;
+            height: 80%;
+            width: 440px;
+            border: 0.8px solid grey;
+            margin-top: 2%;
+
+            box-shadow: darkgray;
+
+
+        }
+
+        h1 {
+            margin-left: 10%;
+            font-size: 2.0rem;
+        }
+
+        form {
+            margin: 2%;
+            width: 100%;
+            line-height: 2.5;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        form>#submit {
+            margin-left: 27%;
+            padding: 3px;
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Update Your Details</h1>
+        <form method="post">
+            <input type="hidden" id="id" name="id" value="<%= id%>">
+            <label for="name">Name: </label><input type="text" id="name" name="name" value="<%= name%>"><br>
+            <label for="age">Age: </label><input type="number" id="age" name="age" min="0" value="<%= age%>"><br>
+            <label for="gender">Gender: </label> Male<input type="radio" value="Male" <%= gender === "Male" ? 'checked' : '' %> name="gender"> Female<input
+                type="radio" value="Female" <%= gender === "Female" ? 'checked' : '' %> name="gender"><br>
+            <label for="section">Section: </label> <input type="checkbox" value="A" <%= section === "A" ? 'checked' : '' %> name="section"> A <input
+                type="checkbox" value="B" <%= section === "B" ? 'checked' : '' %> name="section"> B <input type="checkbox" value="C" <%= section === "C" ? 'checked' : '' %> name="section"> C <input
+                type="checkbox" value="D" <%= section === "D" ? 'checked' : '' %> name="section"> D<br>
+            <label for="city">City:  </label><select name="city">
+                <option value="#">--Select your city--</option>
+                <option value="Lahore" <%= city === "Lahore" ? 'selected' : '' %>>Lahore</option>
+                <option value="Sialkot" <%= city === "Sialkot" ? 'selected' : '' %>>Sialkot</option>
+                <option value="Gujranwala" <%= city === "Gujranwala" ? 'selected' : '' %>>Gujranwala</option>
+                <option value="Kasur" <%= city === "Kasur" ? 'selected' : '' %>>Kasur</option>
+                <option value="Lasbela" <%= city === "Lasbela" ? 'selected' : '' %>>Lasbela</option>
+                <option value="NotKundi" <%= city === "NotKundi" ? 'selected' : '' %>>NotKundi</option>
+                <option value="Bolan" <%= city === "Bolan" ? 'selected' : '' %>>Bolan</option>
+            </select>
+            <br>
+            <label for="province">Province:  </label><select name="province">
+                <option value="#">--Select your province--</option>
+                <option value="Punjab"<%= province === "Punjab" ? 'selected' : '' %>>Punjab</option>
+                <option value="##">Sindh (N/A)</option>
+                <option value="Balochistan" <%= province === "Balochistan" ? 'selected' : '' %>>Balochistan</option>
+                <option value="##">Khyber Pakhtun Khawa (N/A)</option>
+                <option value="##">Gilgit Baltistan (N/A)</option>
+                <option value="##">Azad Jamu Kashmir (N/A)</option>
+            </select>
+            <br>
+            <label for="country">Country:  </label><select name="country">
+                <option value="#">--Select your country--</option>
+                <option value="Pakistan" <%= country === "Pakistan" ? 'selected' : '' %>>Pakistan</option>
+            </select>
+            <input type="submit" value="Register" id="submit">
+        </form>
+    </div>
+</body>
+
+</html>
